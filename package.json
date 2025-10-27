@@ -1,0 +1,30 @@
+{
+  "name": "try-toon",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example": "tsx src/example.ts",
+    "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./public/styles.css --minify",
+    "build:js": "npx esbuild src/chart-bundle.ts --bundle --outfile=public/chart.js --format=iife --global-name=ChartBundle",
+    "visualize": "npm run build:css && npm run build:js && tsx src/visualize.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Example project using TOON format for LLM token optimization",
+  "dependencies": {
+    "@byjohann/toon": "^0.3.1",
+    "chart.js": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

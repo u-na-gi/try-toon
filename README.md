@@ -1,38 +1,62 @@
 # Try TOON
 
-TOON (Token-Oriented Object Notation) を試すプロジェクトです。
+A TypeScript project to explore TOON (Token-Oriented Object Notation).
 
-## TOONとは
+## What is TOON?
 
-LLMトークンを最適化するために設計されたデータフォーマットで、標準のJSONと比較して30-60%のトークン削減を実現します。
+A data format designed to optimize LLM tokens, achieving 30-60% token reduction compared to standard JSON.
 
-## セットアップ
+## Setup
 
 ```bash
 npm install
 ```
 
-## 実行
+## Usage
+
+Basic comparison example:
 
 ```bash
 npm run example
 ```
 
-## 結果
+Visualization and chart generation:
 
-このサンプルでは、商品データをJSON形式とTOON形式で比較しています：
+```bash
+npm run visualize
+```
 
-- JSON: 306文字
-- TOON: 167文字
-- トークン削減率: 45.4%
+This generates `public/index.html`. Open it in your browser to see an interactive chart comparing JSON vs TOON, built with Chart.js and Tailwind CSS.
 
-## TOON形式の特徴
+Build TypeScript:
 
-- インデントベースの構造（ブレースが不要）
-- フィールド名を一度だけ宣言
-- 配列データをテーブル形式で表現
-- LLMが出力を検証しやすい明示的な長さとフィールド宣言
+```bash
+npm run build
+```
 
-## 参考
+## Results
+
+This sample compares product data in JSON and TOON formats:
+
+- JSON: 306 characters
+- TOON: 167 characters
+- Token reduction: 45.4%
+
+## TOON Format Features
+
+- Indent-based structure (no braces needed)
+- Field names declared only once
+- Array data represented in table format
+- Explicit length and field declarations for easy LLM output verification
+
+## Tech Stack
+
+- **Chart.js**: Chart library (npm-managed, no CDN)
+- **Tailwind CSS**: Utility-first CSS framework
+- **TypeScript**: Type-safe development
+- **esbuild**: Chart.js bundler
+- **tsx**: TypeScript runtime
+
+## Reference
 
 - [TOON GitHub Repository](https://github.com/johannschopplich/toon)
