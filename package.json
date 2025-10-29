@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "example": "tsx src/example.ts",
+    "nested": "tsx src/nested-example.ts",
     "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./public/styles.css --minify",
     "build:js": "npx esbuild src/chart-bundle.ts --bundle --outfile=public/chart.js --format=iife --global-name=ChartBundle",
     "visualize": "npm run build:css && npm run build:js && tsx src/visualize.ts",
